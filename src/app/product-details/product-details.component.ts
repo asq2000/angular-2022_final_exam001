@@ -10,8 +10,10 @@ import { CartService } from '../cart.service';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
-ngOnInit(): void {
-throw new Error('Method not implemented.');
+
+  addToCart(product: Product) {
+    this.cartService.addToCart(product);
+    window.alert('Your product has been added to the cart!');
 }
 
   product: Product | undefined;

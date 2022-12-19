@@ -9,6 +9,9 @@ import { Injectable } from '@angular/core';
 export class CartService {
   items: Product[] = [];
  
+  getShippingPrices() {
+    return this.http.get<{type: string, price: number}[]>('/assets/shipping.json');
+  }
   addToCart(product: Product) {
     this.items.push(product);
   }

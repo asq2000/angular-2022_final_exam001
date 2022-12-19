@@ -14,5 +14,5 @@ throw new Error('Method not implemented.');
 }
 
   product: Product | undefined;
-
+  constructor(private route: ActivatedRoute) { }
 }
